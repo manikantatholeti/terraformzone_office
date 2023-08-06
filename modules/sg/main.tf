@@ -1,11 +1,8 @@
-provider "aws" {
- region = "ap-south-1"
-}
 resource "aws_security_group" "tf_sg" {
 
 name = "tf_sg"
 description = "Allows traffic on port 80"
-vpc_id = "vpc-01c39af3b49694811"
+vpc_id = "aws_vpc.my_vpc"
 
 ingress{
     from_port = 80

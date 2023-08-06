@@ -3,8 +3,7 @@ module "vpc" {
 }
 module "sg" {
     source ="../modules/sg"
-    
-}
+  }
 
   module "ec2_instance" {
   source  = "../modules/ec2"
