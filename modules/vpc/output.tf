@@ -5,3 +5,16 @@ output "vpc_id" {
   ]
 }
 
+output "public_subnet_id" {
+  value = aws_subnet.public_subnet.id
+  depends_on = [
+    aws_subnet.public_subnet
+  ]
+}
+
+output "private_subnet_id" {
+  value = aws_subnet.private_subnet.id
+  depends_on = [
+    aws_subnet.public_subnet
+  ]
+}

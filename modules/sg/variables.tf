@@ -23,3 +23,7 @@ variable "sg_ingress_rules" {
         },
     ]
 }
+
+variable "security_group_vpc_id" {
+    type = string
+}

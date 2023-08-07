@@ -26,3 +26,11 @@ variable "Name" {
   type        = string
   description = "Instance type need to provide from the source file"
 }
+
+variable "instance_security_group_id" {
+    type = list(string)
+}
+
+variable "iam_profile" {
+    type = string  
+}
