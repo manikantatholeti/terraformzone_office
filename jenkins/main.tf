@@ -66,3 +66,7 @@ module "ec2_instance" {
     module.iam_role
   ]
 }
+# backend module
+module "backend_s3" {
+  source = "../modules/tfstate-s3" 
+ }
