@@ -11,6 +11,11 @@ pipeline {
             branch: "main"
           }
         }
+        stage ('cd') {
+            steps {
+                sh "cd terraformzone_office"
+            }
+        }
     
       stage ('terraform execution') {
         steps {
