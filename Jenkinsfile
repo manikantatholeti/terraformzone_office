@@ -10,9 +10,9 @@ pipeline {
     
       stage ('terraform execution') {
         steps {
-            sh """/jenkins/terraform init
-                  /jenkins/terraform validate
-                  /jenkins/terraform apply --auto-approve
+            sh """terraform init jenkins
+                  /jenkins/terraform validate jenkins
+                  /jenkins/terraform apply --auto-approve jenkins
                   """
         }
       }
