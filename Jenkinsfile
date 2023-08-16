@@ -8,14 +8,14 @@ pipeline {
           }
         }
         
-      stage ('terraform execution') {
-        steps {
-            sh """terraform init
-                  terraform validate
-                  terraform plan --auto-approve
-                  terraform apply --auto-approve
-                  """
-        }
-      }
+      // stage ('terraform execution') {
+      //   steps {
+      //       sh """terraform init
+      //             terraform validate
+      //             terraform plan --auto-approve
+      //             terraform apply --auto-approve
+      //             """
+      //   }
+      // }
     }
 }
