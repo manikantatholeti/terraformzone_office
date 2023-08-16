@@ -14,9 +14,10 @@ pipeline {
         
       stage ('terraform execution') {
         steps {
-            sh """terraform -chdir=jenkins init
-                  terraform -chdir=jenkins validate
-                  terraform -chdir=jenkins apply --auto-approve
+            sh """terraform init
+                  terraform validate
+                  terraform plan --auto-approve
+                  terraform apply --auto-approve
                   """
         }
       }
