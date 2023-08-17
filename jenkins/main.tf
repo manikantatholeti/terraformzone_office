@@ -51,7 +51,7 @@ output "iam_instance_profile_name" {
 # Instance Module
 module "ec2_instance" {
   source  = "../modules/ec2"
-  instancetype = "t2.micro"
+  instancetype = "t3.micro"
   ami = "ami-0f8ca728008ff5af4"
   key_name = "mani.pem"
   subnet_id = module.vpc.public_subnet_id
