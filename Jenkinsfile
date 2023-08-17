@@ -14,7 +14,7 @@ pipeline {
                    terraform init
                    terraform validate
                    terraform plan
-                   terrafprm apply --auto-approve
+                   terraform apply --auto-approve
                   """
         }
       }
