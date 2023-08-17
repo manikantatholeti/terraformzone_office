@@ -10,9 +10,9 @@ pipeline {
         
       stage ('terraform execution') {
         steps {
-            sh """ cd /var/lib/jenkins/workspace/demo/jenkins/
-                   terraform destroy
-                  """
+            // sh """ cd /var/lib/jenkins/workspace/demo/jenkins/
+            //        terraform init
+            //       """
         }
       }
     }
