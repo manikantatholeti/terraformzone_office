@@ -53,7 +53,7 @@ module "ec2_instance" {
   source  = "../modules/ec2"
   instancetype = "t2.micro"
   ami = "ami-0f8ca728008ff5af4"
-  key_name = "manikey"
+  key_name = "mani.pem"
   subnet_id = module.vpc.public_subnet_id
   associate_public_ip_address = true
   instance_security_group_id = [ module.sg.sg_id ]
