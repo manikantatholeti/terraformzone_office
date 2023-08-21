@@ -11,9 +11,6 @@ pipeline {
       stage ('terraform execution') {
         steps {
             sh """ cd /var/lib/jenkins/workspace/demo/jenkins/
-                   // terraform init
-                   // terraform validate
-                   // terraform plan
                    terraform destroy --auto-approve
                   """
         }
