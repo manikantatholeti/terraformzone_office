@@ -22,6 +22,7 @@ pipeline {
       stage ('terraform execution') {
         steps {
             sh """ cd /var/lib/jenkins/workspace/demo-new/jenkins/
+                   aws sts get-caller-identity
                    terraform init
                    terraform plan
                    terraform ${action} -auto-approve
