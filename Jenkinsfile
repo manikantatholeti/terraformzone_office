@@ -12,6 +12,7 @@ pipeline {
         steps {
             sh """ cd /var/lib/jenkins/workspace/demo-new/jenkins/
                    whoami
+                   chmod -R 777 /var/lib/jenkins/workspace/demo-new
                    aws sts assume-role --role-arn "arn:aws:iam::480459741140:role/terraform-assume-role" --role-session-name "terraform-practice" > assume-role-output.txt
                    export AWS_ACCESS_KEY_ID=`cat assume-role-output.txt | jq -c '.Credentials.AccessKeyId' | tr -d '"' | tr -d ' '`
                    export AWS_SECRET_ACCESS_KEY=`cat assume-role-output.txt | jq -c '.Credentials.SecretAccessKey' | tr -d '"' | tr -d ' '`
