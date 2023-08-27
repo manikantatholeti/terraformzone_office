@@ -19,6 +19,9 @@ pipeline {
                    export AWS_SESSION_TOKEN=`cat assume-role-output.txt | jq -c '.Credentials.SessionToken' | tr -d '"' | tr -d ' '`
                    rm -f assume-role-output.txt
                    aws sts get-caller-identity
+                   terraform init
+                   terraform plan
+                   terraform ${action} -auto-approve
                   """
         }
         }
@@ -27,9 +30,6 @@ pipeline {
         steps {
             sh """ cd /var/lib/jenkins/workspace/demo-new/jenkins/
                    aws sts get-caller-identity
-                   terraform init
-                   terraform plan
-                   terraform ${action} -auto-approve
                   """
         }
       }
