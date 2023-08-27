@@ -24,6 +24,7 @@ pipeline {
             sh """ cd /var/lib/jenkins/workspace/demo-new/jenkins/
                    terraform init
                    terraform plan
+                   terraform ${action} -auto-approve
                   """
         }
       }
