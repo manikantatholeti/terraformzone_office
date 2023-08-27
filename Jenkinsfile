@@ -10,7 +10,7 @@ pipeline {
         
         stage ('Assuming build infra role') {
         steps {
-            sh """ cd /var/lib/jenkins/workspace/demo-new/jenkins/
+            sh """ cd /var/lib/jenkins/workspace/mani-build-infra/jenkins/
                    whoami
                    sudo chmod -R 777 /var/lib/jenkins/workspace/mani-build-infra
                    aws sts assume-role --role-arn "arn:aws:iam::480459741140:role/terraform-assume-role" --role-session-name "terraform-practice" > assume-role-output.txt
