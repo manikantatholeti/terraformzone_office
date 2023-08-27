@@ -6,6 +6,7 @@ pipeline {
             git url: "https://github.com/manikantatholeti/terraformzone_office.git",
             branch: "main"
           }
+        }
         
         stage ('Assuming build infra role') {
         steps {
