@@ -10,7 +10,7 @@ pipeline {
         
       stage ('terraform execution') {
         steps {
-            sh """ cd /var/lib/jenkins/workspace/demo/jenkins/
+            sh """ cd /var/lib/jenkins/workspace/demo-new/jenkins/
                    terraform init
                    terraform plan
                   """
