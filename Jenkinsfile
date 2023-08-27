@@ -16,6 +16,7 @@ pipeline {
                    rm -f assume-role-output.txt
                   """
         }
+        }
         
       stage ('terraform execution') {
         steps {
